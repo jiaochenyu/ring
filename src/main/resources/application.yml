@@ -1,0 +1,12 @@
+server:
+  port: 8888
+  context-path: /
+spring:
+  profiles:
+    active: dev
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database: mysql
+    show-sql: true
+    generate-ddl: true
