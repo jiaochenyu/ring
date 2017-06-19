@@ -1,6 +1,5 @@
 package com.guanweiming.common
 
-import com.sun.javafx.font.directwrite.RECT
 import java.io.Serializable
 
 /**
