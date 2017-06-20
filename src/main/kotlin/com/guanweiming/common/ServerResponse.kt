@@ -1,11 +1,13 @@
 package com.guanweiming.common
 
+import com.fasterxml.jackson.annotation.JsonIgnore
+import com.fasterxml.jackson.databind.annotation.JsonSerialize
 import java.io.Serializable
 
 /**
  * @author  https://github.com/zziaguan/
  */
-
+@JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
 class ServerResponse<T> : Serializable {
     var data: T? = null
     var status: Int?
@@ -24,6 +26,8 @@ class ServerResponse<T> : Serializable {
         this.status = status
         this.msg = msg
     }
+    @JsonIgnore
+    fun isSuccess()=this.status==ResponseCode.SUCCESS.code
 
     companion object {
         fun <T> createBySuccess()
