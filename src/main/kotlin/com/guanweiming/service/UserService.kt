@@ -16,7 +16,7 @@ class UserService @Autowired constructor(val userRepository: UserRepository) {
         if (user.age < 18) {
             return ServerResponse.createByErrorMessage("年龄必须大于18岁")
         }
-        val u: User = userRepository.findUserByName("关卫明") ?: return ServerResponse.createBySuccess(userRepository.save(user))
+        val u: User = userRepository.save(user)
         return ServerResponse.createBySuccess(u)
     }
 }

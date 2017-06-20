@@ -30,7 +30,7 @@ class Swagger2Config{
     private fun apiInfo(): ApiInfo {
         return ApiInfoBuilder()
                 .title("接口文档")
-                .description("ZUA校园信息指南App接口文档")
+                .description("App接口文档")
                 .termsOfServiceUrl("")
                 .contact("zziaguan@163.com")
                 .version("1.0")
